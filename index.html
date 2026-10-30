@@ -1,239 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Live Resume :: Home</title>
-    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/live-resume.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saikhantuya Mihalec — Software Developer</title>
+  <meta name="description" content="Saikhantuya Mihalec — Software Developer at Ericsson. Backend, distributed systems and cloud-native technologies." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-    <header>
-        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="assets/images/share.svg" alt="share" class="btn-img">
-            SHARE</button>
-        <nav class="collapsible-nav" id="collapsible-nav">
-            <a href="index.html" class="nav-link active">HOME</a>
-            <a href="resume.html" class="nav-link">RESUME</a>
-            <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
-            <a href="blog.html" class="nav-link">BLOG</a>
-            <a href="contact.html" class="nav-link">CONTACT</a>
-        </nav>
-        <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
-            data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
-    </header>
-    <div class="content-wrapper">
-        <aside>
-            <div class="profile-img-wrapper">
-                <img src="assets/images/Profile.png" alt="profile">
-            </div>
-            <h1 class="profile-name">Saikhantuya</h1>
-            <div class="text-center">
-                <span class="badge badge-white badge-pill profile-designation">Software developer</span>
-            </div>
-            <nav class="social-links">
-                <a href="#!" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="#!" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#!" class="social-link"><i class="fab fa-behance"></i></a>
-                <a href="#!" class="social-link"><i class="fab fa-dribbble"></i></a>
-                <a href="#!" class="social-link"><i class="fab fa-github"></i></a>
-            </nav>
-            <div class="widget">
-                <h5 class="widget-title">personal information</h5>
-                <div class="widget-content">
-                    <p>BIRTHDAY : Ausgust, 1997</p>
-<!--                    <p>WEBSITE : www.example.com</p>-->
-<!--                    <p>PHONE : +1 123 000 4444</p>-->
-                    <p>MAIL : zsaikhantuya@gmail.com</p>
-                    <p>Location : Earth</p>
-                    <button class="btn btn-download-cv btn-primary rounded-pill"> <img src="assets/images/download.svg" alt="download"
-                        class="btn-img">DOWNLOAD CV </button>
-                </div>
-            </div>
-            <div class="widget card">
-                <div class="card-body">
-                    <div class="widget-content">
-                        <h5 class="widget-title card-title">LANGUAGES</h5>
-                        <p>Mongolian : native</p>
-                        <p>English : fluent</p>
-                        <p>Hungarian : beginner</p>
-                    </div>
-                </div>
-            </div>
-            <div class="widget card">
-                <div class="card-body">
-                    <div class="widget-content">
-                        <h5 class="widget-title card-title">INTERESTS</h5>
-                        <p>Video games</p>
-                        <p>Tennis</p>
-                        <p>Sewing</p>
-                        <p>Theatre</p>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <main>
-            <section class="intro-section">
-                <h2 class="section-title">Hello, Saikhana!</h2>
-                <p>I'm Software developer from Mongolia, working in back-end development. I like to share everything I learnt, and interested.
-                Here in my website, I will share my hobbies, sewing my own clothes, painted mini figures and their process, creative way of tidy home,
-                    interested topic articles about GIS, IT, AI.</p>
-<!--                <a href="#!" class="btn btn-primary btn-hire-me">HIRE ME</a>-->
-            </section>
-            <section class="resume-section">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h6 class="section-subtitle">RESUME</h6>
-                        <h2 class="section-title">EDUCATION</h2>
-                        <ul class="time-line">
-                            <li class="time-line-item">
-                                <span class="badge badge-primary">1998 - 2005</span>
-                                <h6 class="time-line-item-title">Master In Computer Science</h6>
-                                <p class="time-line-item-subtitle">MASTER, UNIVERSITY</p>
-                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
-                                    vitae, interdum sed tortor.</p>
-                            </li>
-                            <li class="time-line-item">
-                                <span class="badge badge-primary">1995 - 1998</span>
-                                <h6 class="time-line-item-title">Studied at Harvard University</h6>
-                                <p class="time-line-item-subtitle">UNIVERSITY</p>
-                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
-                                    vitae, interdum sed tortor.
-                                </p>
-                            </li>
-                            <li class="time-line-item">
-                                <span class="badge badge-primary">1993 - 1995</span>
-                                <h6 class="time-line-item-title">Studied at Oxford University</h6>
-                                <p class="time-line-item-subtitle">UNIVERSITY</p>
-                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
-                                    vitae, interdum sed tortor.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <h6 class="section-subtitle">RESUME</h6>
-                        <h2 class="section-title">Experience</h2>
-                        <ul class="time-line">
-                            <li class="time-line-item">
-                                <span class="badge badge-primary">2010 - 2014</span>
-                                <h6 class="time-line-item-title">UI/UX Designer</h6>
-                                <p class="time-line-item-subtitle">Web Agency</p>
-                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
-                                    vitae, interdum sed
-                                    tortor.</p>
-                            </li>
-                            <li class="time-line-item">
-                                <span class="badge badge-primary">2008 - 2010</span>
-                                <h6 class="time-line-item-title">Web Designer</h6>
-                                <p class="time-line-item-subtitle">Apple Inc.</p>
-                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
-                                    vitae, interdum sed
-                                    tortor.
-                                </p>
-                            </li>
-                            <li class="time-line-item">
-                                <span class="badge badge-primary">2006 - 2008</span>
-                                <h6 class="time-line-item-title">Graphic Designer</h6>
-                                <p class="time-line-item-subtitle">Apple Inc.</p>
-                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
-                                    vitae, interdum sed
-                                    tortor.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section class="services-section">
-                <h6 class="section-subtitle">WHAT I DO</h6>
-                <h2 class="section-title">SERVICES</h2>
-                <div class="row">
-                    <div class="media service-card col-lg-6">
-                        <div class="service-icon">
-                            <img src="assets/images/001-target.svg" alt="target">
-                        </div>
-                        <div class="media-body">
-                            <h5 class="service-title">web designing</h5>
-                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed
-                                tortor.</p>
-                        </div>
-                    </div>
-                    <div class="media service-card col-lg-6">
-                        <div class="service-icon">
-                            <img src="assets/images/003-idea.svg" alt="bulb">
-                        </div>
-                        <div class="media-body">
-                            <h5 class="service-title">Graphic design</h5>
-                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed
-                                tortor.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="media service-card col-lg-6">
-                        <div class="service-icon">
-                            <img src="assets/images/002-development.svg" alt="development">
-                        </div>
-                        <div class="media-body">
-                            <h5 class="service-title">Development</h5>
-                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed
-                                tortor.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="media service-card col-lg-6">
-                        <div class="service-icon">
-                            <img src="assets/images/004-smartphone.svg" alt="smartphone">
-                        </div>
-                        <div class="media-body">
-                            <h5 class="service-title">Mobile design</h5>
-                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed
-                                tortor.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="testimonial-section">
-                <div id="testimonialCarousel" class="testimonial-carousel carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
-                                interdum sed tortor.</p>
-                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
-                            <p class="testimonial-name">Nout Golstein</p>
-                        </div>
-                        <div class="carousel-item">
-                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
-                                interdum sed tortor.</p>
-                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
-                            <p class="testimonial-name">Nout Golstein</p>
-                        </div>
-                        <div class="carousel-item">
-                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
-                                interdum sed tortor.</p>
-                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
-                            <p class="testimonial-name">Nout Golstein</p>
-                        </div>
-                    </div>
-                    <ol class="carousel-indicators">
-                        <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#testimonialCarousel" data-slide-to="1"></li>
-                        <li data-target="#testimonialCarousel" data-slide-to="2"></li>
-                    </ol>
-                </div>
-            </section>
-
-            <footer>Live Resume @ <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2020</footer>
-        </main>
+  <!-- ===================== Sticky top bar ===================== -->
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-name" href="#about">Saikhantuya Mihalec</a>
+      <nav class="topnav-sections" aria-label="Sections">
+        <a href="#experience">Experience</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#education">Education</a>
+        <a href="#more">More</a>
+      </nav>
+      <nav class="topnav-links" aria-label="Contact">
+        <a class="topnav-link primary" href="mailto:zsaikhantuya@gmail.com">Email</a>
+        <a class="topnav-link" href="https://github.com/Saikhana" target="_blank" rel="noopener">GitHub</a>
+        <a class="topnav-link" href="https://www.linkedin.com/in/saikhantuya-zorigt/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
     </div>
-    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
-    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
-    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/live-resume.js"></script>
-</body>
+  </header>
 
+  <div class="shell">
+    <!-- ===================== Sidebar ===================== -->
+    <aside class="sidebar">
+      <div class="identity">
+        <!-- Portrait: blob-shaped photo with a soft tinted blob behind it and a thin
+             orbit line with sparkles circling around. Photo is logos/profile-web.jpg
+             (400x400 crop of profile.jpeg); if missing, the "SM" initials show. -->
+        <div class="portrait">
+          <div class="portrait-blob" aria-hidden="true"></div>
+          <svg class="portrait-orbit" viewBox="0 0 220 170" aria-hidden="true">
+            <defs>
+              <path id="sparkle" d="M0 -8 Q 1 -1 8 0 Q 1 1 0 8 Q -1 1 -8 0 Q -1 -1 0 -8 Z" />
+            </defs>
+            <!-- tilted orbit, wider than the photo so it sweeps around it -->
+            <g transform="rotate(-12 110 85)">
+              <ellipse cx="110" cy="85" rx="104" ry="76" fill="none" stroke="currentColor" stroke-width="0.9" />
+              <!-- sparkles on the orbit (x = 110 + 104cos θ, y = 85 + 76sin θ).
+                   The <g> places each one; the inner <use> pulses in place. -->
+              <g transform="translate(7.6 71.8) scale(1.15)"><use href="#sparkle" class="spark spark--a" /></g>
+              <g transform="translate(200 47) scale(0.65)"><use href="#sparkle" class="spark spark--b" /></g>
+              <g transform="translate(162 150.8) scale(0.85)"><use href="#sparkle" class="spark spark--c" /></g>
+              <g transform="translate(58 19) scale(0.5)"><use href="#sparkle" class="spark spark--d" /></g>
+              <g transform="translate(36 141) scale(0.45)"><use href="#sparkle" class="spark spark--e" /></g>
+            </g>
+          </svg>
+          <div class="avatar">
+            <span aria-hidden="true">SM</span>
+            <img class="avatar-img" src="logos/profile-web.jpg" alt="Saikhantuya Mihalec" width="124" height="124"
+                 decoding="async"
+                 onerror="this.remove()" />
+          </div>
+        </div>
+        <h1 class="name">Saikhantuya<br />Mihalec</h1>
+        <p class="role">Software Developer</p>
+        <p class="meta-line">Hungary</p>
+        <p class="meta-line meta-line--status"><span class="status-dot"></span>Open to opportunities</p>
+        <!-- Shown only in print/PDF, where the top bar is hidden -->
+        <p class="print-only">zsaikhantuya@gmail.com · github.com/Saikhana · linkedin.com/in/saikhantuya-zorigt</p>
+      </div>
+
+      <div class="side-section">
+        <h2 class="side-heading">Skills</h2>
+        <!-- Logo tiles: name shows as a tooltip on hover/focus, and as text in print.
+             Icons are from Devicon v2.16.0 (MIT), saved in logos/skills/. -->
+        <ul class="skill-grid">
+          <li class="skill-tile" data-label="Java" tabindex="0"><img src="logos/skills/java.svg" alt="Java" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="Spring Boot" tabindex="0"><img src="logos/skills/spring.svg" alt="Spring Boot" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="Kubernetes" tabindex="0"><img src="logos/skills/kubernetes.svg" alt="Kubernetes" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="Docker" tabindex="0"><img src="logos/skills/docker.svg" alt="Docker" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="Kafka" tabindex="0"><img src="logos/skills/kafka.svg" alt="Kafka" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="PostgreSQL" tabindex="0"><img src="logos/skills/postgresql.svg" alt="PostgreSQL" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="Apache Spark" tabindex="0"><img src="logos/skills/spark.svg" alt="Apache Spark" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="Helm" tabindex="0"><img src="logos/skills/helm.svg" alt="Helm" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="Jenkins" tabindex="0"><img src="logos/skills/jenkins.svg" alt="Jenkins" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="Git" tabindex="0"><img src="logos/skills/git.svg" alt="Git" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="Prometheus" tabindex="0"><img src="logos/skills/prometheus.svg" alt="Prometheus" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="Python" tabindex="0"><img src="logos/skills/python.svg" alt="Python" width="26" height="26" /></li>
+          <li class="skill-tile" data-label="JavaScript" tabindex="0"><img src="logos/skills/javascript.svg" alt="JavaScript" width="26" height="26" /></li>
+        </ul>
+
+        <!-- Skills without a recognisable logo stay as text chips -->
+        <div class="skills skills--extra">
+          <span class="skill">REST APIs</span>
+          <span class="skill">Avro</span>
+          <span class="skill">Tableau</span>
+          <span class="skill">AI agents</span>
+          <span class="skill">Context-Aware Prompting</span>
+          <span class="skill">Kiro</span>
+          <span class="skill">Amazon Q</span>
+        </div>
+      </div>
+
+      <p class="side-foot">© 2026 Saikhantuya Mihalec</p>
+
+    </aside>
+
+    <!-- ===================== Content ===================== -->
+    <main class="content">
+      <!-- About -->
+      <section class="block" id="about">
+        <p class="intro">
+          Software Developer at <strong>Ericsson</strong> with experience in backend
+          development, distributed systems and cloud-native technologies. I work primarily with
+          Java, Spring Boot and REST APIs, with hands-on experience across Kubernetes, Docker,
+          Helm, Kafka, PostgreSQL and Apache Spark — and a growing focus on AI-assisted
+          development and automation.
+        </p>
+        <div class="intro-actions">
+          <a class="btn primary" href="mailto:zsaikhantuya@gmail.com">Get in touch<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a class="btn" href="#experience">See experience</a>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="block" id="experience">
+        <h2 class="section-title"><span class="section-title-no">01</span> Experience</h2>
+        <div class="timeline">
+          <article class="entry">
+            <div class="logo"><img src="logos/Ericsson-Emblem.png" alt="Ericsson Hungary" width="48" height="48" /></div>
+            <div class="entry-main">
+              <div class="entry-head">
+                <h3>Software Developer</h3>
+                <span class="entry-period">Dec 2025 — Present</span>
+              </div>
+              <p class="entry-org">Ericsson Hungary</p>
+              <ul class="responsibilities">
+                <li>Develop and maintain backend services for KPI calculation solution using Spring Boot.</li>
+                <li>Implement REST APIs and service-to-service communication, including WebClient-based integrations.</li>
+                <li>Work with Kubernetes, Docker and Helm in a cloud-native environment.</li>
+                <li>Contribute to software modernization and dependency migrations.</li>
+                <li>Work with Kafka, Apache Spark, Avro and PostgreSQL in data-processing workflows.</li>
+                <li>Maintain unit and integration tests with JUnit and Mockito; address code-quality issues with SonarQube.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="logo"><img src="logos/Ericsson-Emblem.png" alt="Ericsson Hungary" width="48" height="48" /></div>
+            <div class="entry-main">
+              <div class="entry-head">
+                <h3>Junior Developer</h3>
+                <span class="entry-period">Mar 2024 — Dec 2025</span>
+              </div>
+              <p class="entry-org">Ericsson Hungary</p>
+              <ul class="responsibilities">
+                <li>Developed and maintained backend functionality for the KPI Calculation solution.</li>
+                <li>Worked with Java, Spring Boot, REST APIs, Kafka, PostgreSQL, Kubernetes and Docker.</li>
+                <li>Implemented and tested new functionality; contributed to troubleshooting and defect resolution.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="logo"><img src="logos/Ericsson-Emblem.png" alt="Ericsson Hungary" width="48" height="48" /></div>
+            <div class="entry-main">
+              <div class="entry-head">
+                <h3>Student Developer</h3>
+                <span class="entry-period">May 2023 — Mar 2024</span>
+              </div>
+              <p class="entry-org">Ericsson Hungary</p>
+              <ul class="responsibilities">
+                <li>Worked with Kubernetes for application management and Docker for containerization.</li>
+                <li>Worked with Kafka for data streaming and message processing.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="logo"><img src="logos/novelsoft.jpg" alt="Novelsoft Mongolia" width="48" height="48" /></div>
+            <div class="entry-main">
+              <div class="entry-head">
+                <h3>Developer</h3>
+                <span class="entry-period">Jul 2018 — Oct 2020</span>
+              </div>
+              <p class="entry-org">Novelsoft Mongolia</p>
+              <ul class="responsibilities">
+                <li>Implemented an emergency control notification and procurement-related system using MuleSoft APIs, JavaScript and the ESRI platform.</li>
+                <li>Worked with MS SQL, Tableau, SharePoint and dashboard/visualization tools for data analysis.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Highlights -->
+      <section class="block" id="highlights">
+        <h2 class="section-title"><span class="section-title-no">02</span> Highlights</h2>
+        <div class="highlights">
+          <article class="highlight">
+            <h3 class="highlight-title">AI Ticket Grooming Agent</h3>
+            <p class="highlight-desc">Built an AI-powered agent that improves ticket grooming accuracy, clarifies requirements and reduces ambiguity before development starts.</p>
+            <p class="highlight-stack">AI agents · Context-aware prompting · Automation</p>
+          </article>
+
+          <article class="highlight">
+            <h3 class="highlight-title">Schema Storage Migration</h3>
+            <p class="highlight-desc">Led the migration from Schema Registry to Schema Storage, modernizing how data schemas are managed across the platform.</p>
+            <p class="highlight-stack">Kafka · Avro · PostgreSQL</p>
+          </article>
+
+          <article class="highlight">
+            <h3 class="highlight-title">KPI Calculation Platform</h3>
+            <p class="highlight-desc">Develop and maintain backend services for a cloud-native KPI calculation solution, from REST APIs to data-processing workflows.</p>
+            <p class="highlight-stack">Spring Boot · Kafka · Apache Spark · Kubernetes</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="block" id="education">
+        <h2 class="section-title"><span class="section-title-no">03</span> Education</h2>
+        <div class="timeline">
+          <article class="entry">
+            <div class="logo"><img src="logos/elte.png" alt="Eötvös Loránd University" width="48" height="48" /></div>
+            <div class="entry-main">
+              <div class="entry-head">
+                <h3>M.Sc. Computer Science for Autonomous Systems</h3>
+                <span class="entry-period">Sep 2020 — Dec 2023</span>
+              </div>
+              <p class="entry-org">Eötvös Loránd University, Hungary</p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="logo"><img src="logos/NationalUniversityMongoliaLogo.png" alt="National University of Mongolia" width="48" height="48" /></div>
+            <div class="entry-main">
+              <div class="entry-head">
+                <h3>B.Sc. Environmental Remote Sensing</h3>
+                <span class="entry-period">Sep 2014 — Jul 2018</span>
+              </div>
+              <p class="entry-org">National University of Mongolia</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- More: courses + references -->
+      <section class="block" id="more">
+        <h2 class="section-title"><span class="section-title-no">04</span> Courses &amp; Licences</h2>
+        <ul class="responsibilities courses">
+          <li>Spec-Driven Development with Kiro (2 days) — AWS · Oct 2026</li>
+          <li>Generative AI Driver's License 2026 — Ericsson badge</li>
+          <li>Kubernetes Troubleshooting (5 days) — Ericsson Training Hungary</li>
+          <li>Software Architecture (5 days) — Ericsson Training Hungary</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2 class="section-title"><span class="section-title-no">05</span> References</h2>
+        <div class="refs">
+          <div class="ref">
+            <strong class="ref-name">Péter Kajtor</strong>
+            <span class="ref-org">Ericsson</span>
+            <span class="ref-note">Contact details on request</span>
+          </div>
+          <div class="ref">
+            <strong class="ref-name">András Somodi</strong>
+            <span class="ref-org">Ericsson</span>
+            <span class="ref-note">Contact details on request</span>
+          </div>
+        </div>
+        <p class="refs-note">
+          References are available on request — reach out at
+          <a href="mailto:zsaikhantuya@gmail.com">zsaikhantuya@gmail.com</a>
+          and I'll be glad to share their contact details.
+        </p>
+      </section>
+
+      <footer class="page-footer">
+        <span>Designed &amp; written by Saikhantuya Mihalec · Hungary, 2026</span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Swaying flower growing up from the bottom-right corner of the window -->
+  <div class="floral-deco" aria-hidden="true">
+    <svg class="floral-svg" width="160" height="320" viewBox="0 0 160 320" fill="none">
+      <!-- the whole plant pivots near the base of the stem -->
+      <g class="sway sway-stem">
+        <g stroke="#c9718f" stroke-width="1.4" stroke-linecap="round" opacity="0.9">
+          <path d="M60 310 C 70 250, 50 210, 72 160 C 88 124, 70 90, 96 54"/>
+          <path d="M66 240 C 40 232, 28 212, 30 190 C 54 196, 70 216, 66 240 Z" fill="#e7a9b8" fill-opacity="0.5"/>
+          <path d="M70 196 C 96 188, 116 196, 124 216 C 100 224, 78 218, 70 196 Z" fill="#e7a9b8" fill-opacity="0.5"/>
+          <path d="M80 140 C 56 132, 44 112, 48 90 C 72 98, 86 118, 80 140 Z" fill="#e7a9b8" fill-opacity="0.5"/>
+        </g>
+      </g>
+      <!-- blossoms bob on their own for a livelier feel -->
+      <g class="sway sway-bloom">
+        <g transform="translate(96,46)">
+          <g fill="#f4b8c6" fill-opacity="0.85" stroke="#c9718f" stroke-width="1.2">
+            <ellipse cx="0" cy="-15" rx="9" ry="15"/>
+            <ellipse cx="14" cy="-5" rx="15" ry="9"/>
+            <ellipse cx="9" cy="13" rx="9" ry="15" transform="rotate(30 9 13)"/>
+            <ellipse cx="-9" cy="13" rx="9" ry="15" transform="rotate(-30 -9 13)"/>
+            <ellipse cx="-14" cy="-5" rx="15" ry="9"/>
+          </g>
+          <circle cx="0" cy="0" r="7" fill="#f6d365"/>
+        </g>
+      </g>
+      <g class="sway sway-bloom2">
+        <g transform="translate(128,128) scale(0.72)">
+          <g fill="#e6a4d4" fill-opacity="0.8" stroke="#b76aa6" stroke-width="1.2">
+            <ellipse cx="0" cy="-15" rx="9" ry="15"/>
+            <ellipse cx="14" cy="-5" rx="15" ry="9"/>
+            <ellipse cx="9" cy="13" rx="9" ry="15" transform="rotate(30 9 13)"/>
+            <ellipse cx="-9" cy="13" rx="9" ry="15" transform="rotate(-30 -9 13)"/>
+            <ellipse cx="-14" cy="-5" rx="15" ry="9"/>
+          </g>
+          <circle cx="0" cy="0" r="7" fill="#f6d365"/>
+        </g>
+      </g>
+      <g class="sway sway-bud">
+        <g transform="translate(30,186) scale(0.55)">
+          <g fill="#f4b8c6" fill-opacity="0.85" stroke="#c9718f" stroke-width="1.2">
+            <ellipse cx="0" cy="-12" rx="8" ry="13"/>
+            <ellipse cx="11" cy="-2" rx="13" ry="8"/>
+            <ellipse cx="-11" cy="-2" rx="13" ry="8"/>
+          </g>
+          <circle cx="0" cy="0" r="5" fill="#f6d365"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+</body>
 </html>

@@ -1,0 +1,1122 @@
+/* ==========================================================================
+   Modern feminine resume — blush + rose/lilac, frosted glass cards
+   ========================================================================== */
+
+:root {
+  --bg: #f5f1fb;                         /* lavender mist */
+  --glass: rgba(255, 255, 255, 0.62);    /* frosted card fill */
+  --glass-strong: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --ink: #34232d;                        /* deep plum */
+  --ink-soft: #6a5562;                   /* mauve-grey */
+  --ink-mute: #a68d9a;                   /* rose-grey */
+  --line: #f1dce2;
+  --line-strong: #e8c6d1;
+  --accent: #d04f86;                     /* rose */
+  --accent-ink: #a63269;                 /* deep rose */
+  --lilac: #a78bfa;                      /* lilac, for gradients */
+  --accent-soft: rgba(208, 79, 134, 0.1);
+  --petal: #f4b8c6;
+  --grad: linear-gradient(120deg, #e0679b 0%, #c06ad8 55%, #a78bfa 100%);
+  /* Vivid hot-rose for call-to-action buttons (Get in touch, Email) and the
+     section number pills. Deep enough that white text stays readable. */
+  --cta: linear-gradient(135deg, #e5418c 0%, #cf2a78 55%, #bb1f6b 100%);
+  --cta-hover: linear-gradient(135deg, #ee4f97 0%, #da3283 55%, #c72474 100%);
+  --cta-solid: #cf2a78;
+  --cta-ink: #ffffff;
+  --cta-shadow: rgba(207, 42, 120, 0.32);
+
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(120, 50, 90, 0.04), 0 8px 28px rgba(160, 70, 120, 0.08);
+  --shadow-lift: 0 2px 4px rgba(120, 50, 90, 0.05), 0 16px 40px rgba(160, 70, 120, 0.14);
+
+  --radius: 20px;
+  --nav-h: 56px;
+  --sidebar-w: 310px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Section links land below the sticky top bar instead of under it */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 16px);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(820px 560px at 90% -10%, rgba(255, 205, 178, 0.55), transparent 60%),  /* peach glow, top right */
+    radial-gradient(760px 560px at -5% 30%, rgba(206, 186, 250, 0.55), transparent 60%),   /* lilac, left */
+    radial-gradient(640px 480px at 70% 110%, rgba(248, 187, 208, 0.5), transparent 60%);   /* rose, bottom */
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   Sticky top bar
+   ========================================================================== */
+
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 246, 253, 0.72);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(208, 79, 134, 0.12);
+}
+
+.topnav-inner {
+  max-width: 1120px;
+  height: var(--nav-h);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topnav-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+/* Section links (moved here from the sidebar) */
+.topnav-sections {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+.topnav-sections a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  transition: color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.topnav-sections a:hover {
+  color: var(--accent-ink);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* Not enough room next to the contact links on smaller screens */
+@media (max-width: 1000px) {
+  .topnav-sections {
+    display: none;
+  }
+}
+
+.topnav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topnav-link {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  transition: color 0.2s var(--ease), background 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
+}
+
+.topnav-link:hover {
+  color: var(--accent-ink);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.topnav-link.primary {
+  color: var(--cta-ink);
+  font-weight: 600;
+  background: var(--cta);
+  box-shadow: 0 4px 14px var(--cta-shadow);
+}
+
+.topnav-link.primary:hover {
+  background: var(--cta-hover);
+  color: var(--cta-ink);
+  box-shadow: 0 6px 20px var(--cta-shadow);
+}
+
+/* Shared frosted-glass surface */
+.highlight,
+.ref {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ==========================================================================
+   Shell / layout
+   ========================================================================== */
+
+.shell {
+  position: relative;
+  z-index: 1; /* page content draws above the decorative flower */
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  gap: 64px;
+  padding: 0 40px;
+}
+
+/* ---- Sidebar ---- */
+
+/* The sidebar keeps its natural height (no inner scrolling, which used to hide
+   its bottom and let the photo scroll out of view). It sticks below the top
+   bar on screens tall enough to show all of it; on shorter screens it simply
+   scrolls with the page (see the max-height media query below). */
+.sidebar {
+  position: sticky;
+  top: var(--nav-h);
+  align-self: start;
+  padding: 36px 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+@media (max-height: 900px) {
+  .sidebar {
+    position: static;
+  }
+}
+
+/* Swaying flower growing up from the bottom of the window. It's centred on the
+   right edge of the content column (content is 1040px wide, so the gap beside
+   it is (100vw - 1040px) / 2), so about half of it sits behind the sections.
+   The content is layered above it (see .shell), and the flower is slightly
+   transparent so text over it stays readable. */
+.floral-deco {
+  --flower-w: 230px;
+  position: fixed;
+  right: max(-40px, calc((100vw - 1040px) / 2 - var(--flower-w) / 2));
+  bottom: -6px; /* tuck the stem base just past the window edge */
+  width: var(--flower-w);
+  aspect-ratio: 1 / 2;
+  opacity: 0.72;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* On narrow/phone layouts the content fills the screen; hide the flower there */
+@media (max-width: 880px) {
+  .floral-deco {
+    display: none;
+  }
+}
+
+.floral-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Each sprig pivots from its base, so it rocks like it's in a breeze
+   instead of spinning around its own middle. */
+.sway {
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  will-change: transform;
+}
+
+.sway-stem {
+  transform-origin: 60px 310px; /* base of the main stem in viewBox units */
+  animation: sway-main 5.5s ease-in-out infinite;
+}
+
+.sway-bloom {
+  transform-origin: 96px 90px;
+  animation: sway-top 4s ease-in-out infinite;
+}
+
+.sway-bloom2 {
+  transform-origin: 128px 160px;
+  animation: sway-top 4.6s ease-in-out infinite 0.4s;
+}
+
+.sway-bud {
+  transform-origin: 30px 210px;
+  animation: sway-top 4.3s ease-in-out infinite 0.8s;
+}
+
+@keyframes sway-main {
+  0%, 100% { transform: rotate(-2.2deg); }
+  50%      { transform: rotate(2.2deg); }
+}
+
+@keyframes sway-top {
+  0%, 100% { transform: rotate(-5deg); }
+  50%      { transform: rotate(5deg); }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .sway,
+  .block,
+  .status-dot,
+  .avatar,
+  .portrait-blob,
+  .portrait-orbit,
+  .portrait-orbit .spark {
+    animation: none !important;
+  }
+}
+
+/* ---- Identity ---- */
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ---- Portrait: blob photo + tinted blob behind + orbit line with sparkles ---- */
+
+.portrait {
+  position: relative;
+  width: 220px;
+  height: 170px;
+  margin: 0 0 18px; /* no negative offset: the scrolling sidebar would clip the orbit */
+  display: grid;
+  place-items: center;
+}
+
+/* soft tinted blob, offset down-right behind the photo */
+.portrait-blob {
+  position: absolute;
+  width: 132px;
+  height: 124px;
+  left: 64px;
+  top: 34px;
+  background: linear-gradient(135deg, rgba(244, 184, 198, 0.8), rgba(196, 170, 250, 0.75));
+  border-radius: 58% 42% 50% 50% / 46% 56% 44% 54%;
+  animation: blob-morph 11s ease-in-out infinite alternate-reverse;
+}
+
+/* thin tilted orbit line around the photo (static; only the sparkles move) */
+.portrait-orbit {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(166, 50, 105, 0.42);
+  overflow: visible;
+}
+
+/* Sparkles: each one pops, glows, turns a little and fades, at its own time.
+   The sparkle shape is drawn around (0,0), so scaling from its centre keeps it
+   on the orbit line; the parent <g> handles placement. */
+.portrait-orbit .spark {
+  fill: var(--accent-ink);
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 0 2px rgba(224, 103, 155, 0.9));
+  animation: sparkle 2.8s ease-in-out infinite;
+}
+
+.portrait-orbit .spark--b { animation-delay: 0.6s; fill: #c06ad8; }
+.portrait-orbit .spark--c { animation-delay: 1.3s; }
+.portrait-orbit .spark--d { animation-delay: 1.9s; fill: #c06ad8; }
+.portrait-orbit .spark--e { animation-delay: 2.3s; }
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.45) rotate(0deg); }
+  45%      { opacity: 1;    transform: scale(1.25) rotate(20deg); }
+  60%      { opacity: 0.9;  transform: scale(1)    rotate(25deg); }
+}
+
+.avatar {
+  position: relative;
+  z-index: 1;
+  width: 124px;
+  height: 124px;
+  overflow: hidden;
+  /* organic blob shape that slowly morphs */
+  border-radius: 46% 54% 52% 48% / 55% 45% 55% 45%;
+  animation: blob-morph 9s ease-in-out infinite alternate;
+  background: var(--grad);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9), 0 14px 32px rgba(192, 106, 216, 0.28);
+}
+
+/* The photo sits on top of the initials; if it's missing the img removes
+   itself and the gradient + initials show through. */
+.avatar-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes blob-morph {
+  0%   { border-radius: 46% 54% 52% 48% / 55% 45% 55% 45%; }
+  50%  { border-radius: 58% 42% 44% 56% / 46% 58% 42% 54%; }
+  100% { border-radius: 42% 58% 60% 40% / 52% 42% 58% 48%; }
+}
+
+
+
+.name {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(120deg, var(--ink) 30%, var(--accent-ink) 75%, #8b5cf6 110%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.role {
+  margin: 10px 0 0;
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+}
+
+.print-only {
+  display: none;
+}
+
+/* ---- Location + status under the role ---- */
+
+.meta-line {
+  margin: 6px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.meta-line + .meta-line {
+  margin-top: 2px;
+}
+
+.role + .meta-line {
+  margin-top: 14px;
+}
+
+.meta-line--status {
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--grad);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+  animation: bloom 2.4s ease-in-out infinite;
+}
+
+@keyframes bloom {
+  0%, 100% {
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(208, 79, 134, 0.04);
+  }
+}
+
+/* ---- Sidebar skills ---- */
+
+.side-heading {
+  margin: 0 0 12px;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  font-weight: 700;
+}
+
+/* Logo tiles */
+.skill-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 48px);
+  gap: 10px;
+}
+
+.skill-tile {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 1px 2px rgba(120, 50, 90, 0.05), 0 6px 16px rgba(160, 70, 120, 0.07);
+  cursor: default;
+  outline: none;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.skill-tile img {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.25s var(--ease);
+}
+
+.skill-tile:hover,
+.skill-tile:focus-visible {
+  transform: translateY(-3px) rotate(-3deg);
+  box-shadow: 0 10px 24px rgba(192, 106, 216, 0.25);
+}
+
+.skill-tile:hover img,
+.skill-tile:focus-visible img {
+  transform: scale(1.12);
+}
+
+.skill-tile:focus-visible {
+  box-shadow: 0 0 0 2px var(--accent), 0 10px 24px rgba(192, 106, 216, 0.25);
+}
+
+/* Name tooltip */
+.skill-tile::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translate(-50%, 4px);
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 0.18s var(--ease), transform 0.18s var(--ease);
+}
+
+.skill-tile:hover::after,
+.skill-tile:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skills--extra {
+  margin-top: 14px;
+}
+
+.skill {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 1px 2px rgba(120, 50, 90, 0.05);
+  color: var(--ink-soft);
+  transition: color 0.2s var(--ease), transform 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
+}
+
+.skill:hover {
+  color: var(--accent-ink);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(208, 79, 134, 0.15);
+}
+
+.side-foot {
+  margin: auto 0 0;
+  font-size: 12px;
+  color: var(--ink-mute);
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content {
+  padding: 64px 0 80px;
+  min-width: 0;
+}
+
+.block {
+  margin-bottom: 52px;
+  animation: rise 0.6s var(--ease) both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---- Intro ---- */
+
+.intro {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.intro strong {
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  height: 42px;
+  padding: 0 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-strong);
+  box-shadow: var(--shadow-soft);
+  color: var(--ink);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease),
+    color 0.2s var(--ease);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+  color: var(--accent-ink);
+}
+
+.btn.primary {
+  gap: 12px;
+  padding-right: 6px; /* the arrow circle sits snugly in the pill's end */
+  background: var(--cta);
+  border-color: transparent;
+  color: var(--cta-ink);
+  box-shadow: 0 8px 22px var(--cta-shadow);
+}
+
+.btn.primary:hover {
+  background: var(--cta-hover);
+  color: var(--cta-ink);
+  box-shadow: 0 12px 30px var(--cta-shadow);
+}
+
+/* round arrow button attached to the end of the pill */
+.btn-arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--cta-solid);
+  transition: transform 0.25s var(--ease);
+}
+
+.btn-arrow svg {
+  display: block; /* no text baseline, so the chevron centres exactly */
+}
+
+.btn.primary:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* ---- Section titles ---- */
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 26px;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* soft gradient rule that fills the rest of the line */
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--line-strong), transparent);
+}
+
+.section-title-no {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--cta-ink);
+  background: var(--cta);
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 4px 12px var(--cta-shadow);
+}
+
+/* little bloom inside the number pill */
+.section-title-no::before {
+  content: "✿";
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+/* ---- Timeline ---- */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 18px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.entry-main {
+  min-width: 0;
+}
+
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.entry-head h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.entry-period {
+  flex: 0 0 auto;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--ink-mute);
+  font-variant-numeric: tabular-nums;
+}
+
+.entry-org {
+  margin: 2px 0 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.responsibilities {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.responsibilities li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* small gradient dot bullets */
+.responsibilities li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--grad);
+}
+
+.courses {
+  margin-top: 0;
+}
+
+/* ---- Highlights ---- */
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.highlight {
+  position: relative;
+  padding: 22px 22px 20px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+/* gradient accent bar across the top of each card */
+.highlight::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--grad);
+}
+
+.highlight:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+}
+
+.highlight-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.highlight-desc {
+  margin: 8px 0 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.highlight-stack {
+  margin: 14px 0 0;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--accent-ink);
+}
+
+/* ---- References ---- */
+
+.refs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.ref {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+}
+
+.ref-name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ref-org {
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  margin-bottom: 4px;
+}
+
+.ref-note {
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--ink-mute);
+}
+
+.refs-note {
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.refs-note a {
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+
+.refs-note a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Footer ---- */
+
+.page-footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  color: var(--ink-mute);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 880px) {
+  .shell {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 24px;
+  }
+  .sidebar {
+    position: static;
+    height: auto;
+    padding: 40px 0 8px;
+    gap: 24px;
+  }
+  .side-foot {
+    display: none;
+  }
+  .content {
+    padding: 28px 0 64px;
+  }
+  .name {
+    font-size: 28px;
+  }
+  .intro {
+    font-size: 16px;
+  }
+  /* Centre the profile block (photo, name, role, location, status) */
+  .identity {
+    align-items: center;
+    text-align: center;
+  }
+  .portrait {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .meta-line {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 880px) {
+  .topnav-inner {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 440px) {
+  .topnav-name {
+    display: none; /* the sidebar already shows the name; keep the links */
+  }
+  .topnav-inner {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 520px) {
+  .entry-head {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .refs {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Print
+   ========================================================================== */
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+  .shell {
+    display: block;
+    max-width: none;
+    padding: 0;
+  }
+  .sidebar {
+    position: static;
+    height: auto;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 24px;
+  }
+  .side-foot,
+  .intro-actions {
+    display: none;
+  }
+  .floral-deco {
+    display: none;
+  }
+  .topnav {
+    display: none;
+  }
+  .print-only {
+    display: block;
+    margin: 10px 0 0;
+    font-size: 10pt;
+    color: #333;
+  }
+  .portrait-orbit,
+  .portrait-blob {
+    display: none;
+  }
+  .avatar {
+    animation: none;
+  }
+  /* In the PDF, show each logo's name beside it instead of a hover tooltip */
+  .skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+  }
+  .skill-tile {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    gap: 5px;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .skill-tile img {
+    width: 14px;
+    height: 14px;
+  }
+  .skill-tile::after {
+    position: static;
+    opacity: 1;
+    transform: none;
+    padding: 0;
+    background: none;
+    color: #333;
+    font-size: 9.5pt;
+    font-weight: 500;
+  }
+  .highlight,
+  .ref {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  .skills {
+    gap: 5px;
+  }
+  .block {
+    animation: none;
+    break-inside: avoid;
+    margin-bottom: 28px;
+  }
+  .entry,
+  .ref,
+  .highlight {
+    break-inside: avoid;
+  }
+  .avatar,
+  .name,
+  .section-title-no,
+  .highlight::before,
+  .responsibilities li::before {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
